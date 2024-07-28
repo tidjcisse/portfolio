@@ -1,0 +1,121 @@
+
+        :root {
+        --color2:#f4f4f4;
+        }
+        *{
+            box-sizing:border-box;
+        }
+        body {
+            line-height: 1.4;
+            margin:0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        div.cover{
+            
+            background: url(cover_overlay.png) no-repeat center/100% 100%,url(cover.jpg) no-repeat center/cover;
+            height: 320px;
+            position: relative;
+        }
+        div.cover p {
+            color: lightblue;
+            text-align: center;
+        }
+        a.mecontacter {
+            border: 3px solid #000 white;
+            color: aquamarine;
+            text-align: center;
+            margin: auto;
+            padding: 8px 20px;
+            text-decoration: none;
+            display: inline-block;
+            background-color: #00000040;
+        }
+        a.mecontacter:hover {
+            color: white;
+
+        }
+        img.cover-profile{
+            width: 150px;
+            height: 150px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: auto;
+        }
+        h1 {color: white;
+            text-align: center;
+        }
+        div.cover-contact{
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            border-left: 4px solid #ece6e5;
+            padding-left: 8px;
+        }
+        div.cover-contact p{
+            text-align: left;
+            margin-top: 0px;
+            margin-bottom: 0;
+        }
+        div.cover-contact p:first-child{
+            margin-bottom: 14px;
+        }
+        div.cover-contact *{
+            color: lightblue;
+        }
+        div.montravail p:first-child{
+            text-align: center;
+            font-size: 20px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        div.montravail p:nth-child(2){
+            text-align: center;
+        }
+
+        .ensavoirplus{
+            padding-left: 40px;
+            padding-right: 40px;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            height: 100%;
+            overflow: auto;
+        }
+        h2{
+            text-align: center;
+            font-size:34px ;
+            margin-top: 0px;
+        }
+        .col40{
+            width: 40%;
+
+        }
+        .col60{
+            width: 60%;
+            
+        }
+        .float-right{
+            float: right;
+        }
+        p.text-ligne-vertical{
+            margin: 0px;
+            border-left: 4px solid;
+            padding-left: 8px;
+        }
+        div.barre-verticale{
+            height: 50px;
+            width: 4px;
+            background-color: #656565;
+        }
+        div.sep p{
+            text-align: center;
+        }
+        div.projets img{
+            width: 30%;
+            margin: 10px;
+        }
+        div.projets p{
+            text-align: center;
+        }
