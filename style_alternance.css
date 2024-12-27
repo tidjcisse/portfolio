@@ -119,3 +119,29 @@
         div.projets p{
             text-align: center;
         }
+        /* Style pour la section projets */
+.projets {
+    text-align: center;
+}
+
+/* Div principale contenant les images */
+.project {
+    display: flex;
+    flex-wrap: wrap;          /* Permet de "retourner" les images sur une nouvelle ligne */
+    justify-content: center;  /* Centre les images horizontalement */
+    gap: 10px;                /* Espacement entre les images */
+    max-width: 800px;         /* Limite la largeur totale de la zone */
+    margin: 0 auto;           /* Centre le conteneur .project sur la page */
+}
+
+/* Style pour les images */
+.project img {
+    width: 45%;               /* Chaque image occupe 45% de la largeur du conteneur */
+    height: auto;             /* Maintien les proportions */
+    display: block;           /* Supprime l'espace sous les images */
+}
+
+/* Optionnel : style pour le titre et la description */
+.projets h2, .projets p {
+    margin-bottom: 20px;
+}
