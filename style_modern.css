@@ -2,12 +2,13 @@
 
 /* Palette de couleurs inspirée du bleu scientifique */
 :root {
-  --color-primary: #0077b6;
-  --color-secondary: #00b4d8;
+  --color-primary: rgba(0, 119, 182, 0.7);
+  --color-secondary: rgba(0, 180, 216, 0.7);
   --color-accent: #90e0ef;
   --color-dark: #023e8a;
   --color-bg: #f8f9fb;
 }
+
 
 /* Général */
 body {
