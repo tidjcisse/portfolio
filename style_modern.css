@@ -157,3 +157,22 @@ div.projets img:hover {
     width: 80%;
   }
 }
+
+.project {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.project img,
+.project video {
+  width: 25%;               /* Ajuste selon ton goût : 20–30% */
+  height: auto;
+  border-radius: 12px;
+  margin: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+
