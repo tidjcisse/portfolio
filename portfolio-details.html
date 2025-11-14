@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Détails du projet — Tidjani Cissé | Bioinformatique</title>
+  <meta name="description" content="Détails de projet : analyses omiques, pipelines reproductibles, data viz et applications web.">
+  <link rel="icon" href="assets/img/favicon.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+
+  <!-- Fonts (les mêmes que l’index) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Raleway:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS -->
+  <link href="assets/css/main.css" rel="stylesheet">
+</head>
+
+<body class="portfolio-details-page">
+
+  <!-- Sidebar / Header (même style que l’index) -->
+  <header id="header" class="header dark-background d-flex flex-column">
+    <i class="header-toggle d-xl-none bi bi-list" aria-label="Ouvrir le menu"></i>
+
+    <div class="profile-img">
+      <img src="assets/img/my-profile-img.png" alt="Photo de profil de Tidjani Cissé" class="img-fluid rounded-circle" loading="lazy" width="160" height="160">
+    </div>
+
+    <a href="index.html" class="logo d-flex align-items-center justify-content-center" aria-label="Accueil">
+      <h1 class="sitename">Tidjani CISSE</h1>
+    </a>
+
+    <div class="social-links text-center">
+      <a href="https://www.linkedin.com/in/tidjani-cisse-3a9411197" class="linkedin" aria-label="LinkedIn" target="_blank" rel="noopener">
+        <i class="bi bi-linkedin"></i>
+      </a>
+    </div>
+
+    <!-- Sélecteur de langue -->
+    <div class="language-switcher text-center mt-2">
+      <a href="index.html" class="lang-link me-2" lang="fr" hreflang="fr">FR</a> |
+      <a href="index-en.html" class="lang-link ms-2" lang="en" hreflang="en">EN</a>
+    </div>
+
+    <!-- Menu : renvoie vers les sections de l’index -->
+    <nav id="navmenu" class="navmenu mt-3" aria-label="Navigation principale">
+      <ul>
+        <li><a href="index.html#hero"><i class="bi bi-house navicon"></i> Accueil</a></li>
+        <li><a href="index.html#about"><i class="bi bi-person navicon"></i> À propos</a></li>
+        <li><a href="index.html#resume"><i class="bi bi-file-earmark-text navicon"></i> CV</a></li>
+        <li><a href="index.html#portfolio" class="active" aria-current="page"><i class="bi bi-images navicon"></i> Portfolio</a></li>
+        <li><a href="index.html#localisation"><i class="bi bi-geo-alt navicon"></i> Localisation</a></li>
+        <li><a href="index.html#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Horloge -->
+    <div class="text-center mt-3">
+      <span id="live-clock" class="small text-white-50" aria-live="polite"></span>
+    </div>
+  </header>
+
+  <main class="main">
+
+  <!-- Page Title -->
+  <div class="page-title dark-background">
+    <div class="container d-lg-flex justify-content-between align-items-center">
+      <h1 class="mb-2 mb-lg-0">Détails des projets</h1>
+      <nav class="breadcrumbs">
+        <ol>
+          <li><a href="index.html#portfolio">Retour au portfolio</a></li>
+          <li class="current">Détails</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Sous-navigation locale (ancres) -->
+  <div class="container my-3">
+    <ul class="nav nav-pills justify-content-center flex-wrap gap-2">
+      <li class="nav-item"><a class="nav-link active" href="#scrna">scRNA-seq</a></li>
+      <li class="nav-item"><a class="nav-link" href="#te-bulk">TE • bulk RNA-seq (M1)</a></li>
+      <li class="nav-item"><a class="nav-link" href="#erv">ERVs • bulk RNA-seq (M2)</a></li>
+      <li class="nav-item"><a class="nav-link" href="#proteomics">Protéomique & Apps</a></li>
+    </ul>
+  </div>
+
+  <!-- ========== GROUPE 1 : scRNA-seq ========== -->
+  <section id="scrna" class="portfolio-details section">
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <div class="row gy-4">
+        <div class="col-lg-8">
+          <div class="portfolio-details-slider swiper init-swiper">
+            <script type="application/json" class="swiper-config">
+              { "loop": true, "speed": 600, "autoplay": { "delay": 5000 },
+                "slidesPerView": 1,
+                "pagination": { "el": ".swiper-pagination", "type": "bullets", "clickable": true } }
+            </script>
+            <div class="swiper-wrapper align-items-center">
+              <div class="swiper-slide">
+                <img src="assets/img/portfolio/markers_clusters.png" alt="scRNA-seq — gènes marqueurs par clusters" loading="lazy">
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/img/portfolio/qc_rnaseq.png" alt="scRNA-seq — contrôles qualité et métriques" loading="lazy">
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/img/portfolio/pbmc3k_umap.jpg" alt="scRNA-seq — UMAP PBMC clustering" loading="lazy">
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="portfolio-info" data-aos="fade-up" data-aos-delay="150">
+            <h3>Informations du projet</h3>
+            <ul>
+              <li><strong>Catégories</strong> : scRNA-seq, QC, Clustering</li>
+              <li><strong>Laboratoire</strong> : Tutorat académique</li>
+              <li><strong>Date</strong> : <time datetime="[2024-08-01]"> 2024</time></li>
+              <li><strong>URL projet</strong> :
+                <a href="assets/docs/ScRNA-seq_data_analysis_with_Seurat.pdf" target="_blank" rel="noopener">doc_pp</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="portfolio-description" data-aos="fade-up" data-aos-delay="200">
+            <h2>Pipeline scRNA-seq — PBMC</h2>
+            <p>Prétraitement (filtrage UMI/gènes/MT%), normalisation, réduction dimensionnelle, clustering et annotation des types cellulaires. Identification des gènes marqueurs par cluster et visualisations (UMAP, heatmaps).</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== GROUPE 2 : TE • bulk RNA-seq (M1) ========== -->
+  <section id="te-bulk" class="portfolio-details section">
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <div class="row gy-4">
+        <div class="col-lg-8">
+          <div class="portfolio-details-slider swiper init-swiper">
+            <script type="application/json" class="swiper-config">
+              { "loop": true, "speed": 600, "autoplay": { "delay": 5000 },
+                "slidesPerView": 1,
+                "pagination": { "el": ".swiper-pagination", "type": "bullets", "clickable": true } }
+            </script>
+            <div class="swiper-wrapper align-items-center">
+              <div class="swiper-slide">
+                <img src="assets/img/portfolio/stageM1.png" alt="TE & IIV6 — résultats bulk RNA-seq (visuel 1)" loading="lazy">
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/img/portfolio/stageM1_2.png" alt="TE & IIV6 — résultats bulk RNA-seq (visuel 2)" loading="lazy">
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/img/portfolio/stageM1_3.png" alt="TE & IIV6 — résultats bulk RNA-seq (visuel 3)" loading="lazy">
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="portfolio-info" data-aos="fade-up" data-aos-delay="150">
+            <h3>Informations du projet</h3>
+            <ul>
+              <li><strong>Catégories</strong> : bulk RNA-seq, Transposable Elements</li>
+              <li><strong>Laboratoire</strong> : LBBE</li>
+              <li><strong>Date</strong> : <time datetime="[2024-07-01]"> 2024</time></li>
+              <li><strong>URL projet</strong> : <a href="assets/docs/element_transposable.pdf" target="_blank" rel="noopener">doc_soutenance</a></li>
+            </ul>
+          </div>
+
+          <div class="portfolio-description" data-aos="fade-up" data-aos-delay="200">
+            <h2>ET & virus IIV6 — Drosophila</h2>
+            <p>Analyse de l’expression des éléments transposables (ET) et étude des insertions potentielles dans le génome viral (IIV6) via données bulk RNA-seq et annotation sous IGV. Mise en évidence d’une surexpression des ET induite par l’infection virale.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== GROUPE 3 : ERVs • bulk RNA-seq (M2) ========== -->
+  <section id="erv" class="portfolio-details section">
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <div class="row gy-4">
+        <div class="col-lg-8">
+          <div class="portfolio-details-slider swiper init-swiper">
+            <script type="application/json" class="swiper-config">
+              { "loop": true, "speed": 600, "autoplay": { "delay": 5000 },
+                "slidesPerView": 1,
+                "pagination": { "el": ".swiper-pagination", "type": "bullets", "clickable": true } }
+            </script>
+            <div class="swiper-wrapper align-items-center">
+              <div class="swiper-slide">
+                <img src="assets/img/portfolio/cycle_erv.svg" alt="ERV — schéma et cycle" loading="lazy">
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/img/portfolio/pipeline_ivpc.png" alt="Pipeline RNA-seq — ERV (INRAE/LBBE)" loading="lazy">
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/img/portfolio/results_ivpc.png" alt="ERV — résultats d’expression" loading="lazy">
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+        <div class="portfolio-info" data-aos="fade-up" data-aos-delay="150">
+          <h3>Informations du projet</h3>
+          <ul>
+            <li><strong>Catégories</strong> : bulk RNA-seq, Pipelines</li>
+            <li><strong>Laboratoire</strong> : INRAE (IVPC) &amp; LBBE</li>
+            <li><strong>Date</strong> : <time datetime="2025-06-30">2025</time></li>
+            <li><strong>URL projet</strong> : <a href="assets/docs/stage_volontaire.pdf" target="_blank" rel="noopener">doc_soutenance</a></li>
+          </ul>
+        </div>
+          <div class="portfolio-description" data-aos="fade-up" data-aos-delay="200">
+            <h2>ERVII-5 & ERVII-3 — petits ruminants</h2>
+            <p>
+              Étude de l’expression de deux familles de rétrovirus endogènes (<em>ERVII-5</em> et <em>ERVII-3</em>)
+              chez les petits ruminants afin d’évaluer leur activité transcriptionnelle et leur impact évolutif sur
+              l’expression génique. Analyses réalisées à partir de données RNA-seq, incluant le traitement,
+              la cartographie et la quantification des transcrits. Le projet s’inscrit dans les recherches sur
+              la co-évolution entre les rétrovirus et leurs hôtes.
+            </p>
+          </div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <!-- ========== GROUPE 4 : Protéomique & Apps ========== -->
+  <section id="proteomics" class="portfolio-details section">
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <div class="row gy-4">
+        <div class="col-lg-8">
+          <div class="portfolio-details-slider swiper init-swiper">
+            <script type="application/json" class="swiper-config">
+              { "loop": true, "speed": 600, "autoplay": { "delay": 5000 },
+                "slidesPerView": 1,
+                "pagination": { "el": ".swiper-pagination", "type": "bullets", "clickable": true } }
+            </script>
+            <div class="swiper-wrapper align-items-center">
+              <div class="swiper-slide">
+                <img src="assets/img/portfolio/proteomic_img.png" alt="PeptideFinder — identification de peptides (MS)" loading="lazy">
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/img/portfolio/shiny_viz.png" alt="Protéomique — visualisations Shiny" loading="lazy">
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/img/portfolio/shiny_viz2.png" alt="Protéomique — visualisations Shiny (vue 2)" loading="lazy">
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+        <div class="portfolio-info" data-aos="fade-up" data-aos-delay="150">
+          <h3>Informations du projet</h3>
+          <ul>
+            <li><strong>Catégories</strong> : Proteomics, Peptide Identification, Phylogeny</li>
+            <li><strong>Laboratoire</strong> : INRAE</li>
+            <li><strong>Date</strong> : <time datetime="2024-09-15">2024</time></li>
+            <li><strong>URL projet</strong> :
+              <a href="http://pedago-service.univ-lyon1.fr:2325/tfoussenisalamicisse/proteomic-and-defensome-project"
+                target="_blank" rel="noopener noreferrer">
+                GitLab – proteomic-and-defensome-project
+              </a>
+            </li>
+          </ul>
+        </div>
+          <div class="portfolio-description" data-aos="fade-up" data-aos-delay="200">
+            <h2>PeptideFinder & Viz interactives</h2>
+            <p>
+              Ce projet se concentre sur l'identification de biomarqueurs protéomiques issus du défensome chimique des espèces de poissons sauvages. En intégrant des outils bioinformatiques et des flux de travail computationnels, nous visons à analyser les données génomiques et protéomiques pour comprendre les réponses de ces espèces aux facteurs de stress environnementaux. Le projet explore également des biomarqueurs potentiels pour la surveillance écologique et l'évaluation des risques.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+  <footer id="footer" class="footer position-relative light-background">
+    <div class="container">
+      <div class="copyright text-center">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">Tidjani Cissé</strong> <span>Tous droits réservés</span></p>
+      </div>
+      <div class="credits">
+        Design basé sur <a href="https://bootstrapmade.com/" target="_blank" rel="noopener">BootstrapMade</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
+<!-- Contact Section -->

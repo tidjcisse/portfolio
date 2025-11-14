@@ -1,0 +1,1287 @@
+/**
+* Template Name: iPortfolio
+* Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
+* Updated: Jun 29 2024 with Bootstrap v5.3.3
+* Author: BootstrapMade.com
+* License: https://bootstrapmade.com/license/
+*/
+
+/*--------------------------------------------------------------
+# Font & Color Variables
+# Help: https://bootstrapmade.com/color-system/
+--------------------------------------------------------------*/
+
+/* =======================================================
+   Personnalisation de la colonne latérale gauche (header)
+   ======================================================= */
+
+/* 1️⃣  Taille et espacement général */
+#header {
+  width: 400px;                     /* largeur augmentée */
+  padding-top: 25px;                /* plus d’air en haut */
+  font-size: 1.05rem;               /* texte légèrement plus grand */
+}
+
+/* 2️⃣  Photo de profil plus grande */
+#header .profile-img img {
+  width: 190px;                     /* au lieu de ~120–150px */
+  height: 190px;
+  border: 3px solid #0ea5e9;        /* léger cadre coloré */
+  box-shadow: 0 0 15px rgba(14,165,233,0.3);
+}
+
+/* 3️⃣  Nom / titre */
+#header .sitename {
+  font-size: 1.8rem;                /* titre plus grand */
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+/* 4️⃣  Icônes sociales plus grandes et espacées */
+#header .social-links a {
+  font-size: 1.4rem;                /* taille icône */
+  margin: 0 8px;
+}
+#header .social-links a:hover {
+  transform: scale(1.15);
+  transition: transform 0.2s ease;
+}
+
+/* 5️⃣  Liens du menu (icônes + texte) */
+#header .navmenu a {
+  font-size: 1.5rem;               /* texte plus grand */
+  padding: 12px 20px;               /* plus d’espace cliquable */
+}
+#header .navmenu a i {
+  font-size: 1.2rem;                /* icône un peu plus grande */
+  margin-right: 10px;
+}
+#header .navmenu a:hover,
+#header .navmenu a.active {
+  background-color: rgba(14,165,233,0.15);
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+
+/* 6️⃣  Sélecteur de langue */
+.language-switcher {
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+.language-switcher a {
+  color: #0ea5e9;
+  font-weight: 600;
+}
+
+/* 7️⃣  Horloge */
+#live-clock {
+  font-size: 1.2rem;
+  color: #ddd;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+
+/* Fonts */
+:root {
+  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Raleway",  sans-serif;
+  --nav-font: "Poppins",  sans-serif;
+}
+
+/* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
+:root { 
+  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
+  --default-color: #272829; /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #050d18; /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #149ddd; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+}
+
+/* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
+:root {
+  --nav-color: #a8a9b4;  /* The default color of the main navmenu links */
+  --nav-hover-color: #ffffff; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-mobile-background-color: #040b14; /* Used as the background color for mobile navigation menu */
+  --nav-dropdown-background-color: #040b14; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+  --nav-dropdown-color: #a8a9b4; /* Used for navigation links of the dropdown items in the navigation menu. */
+  --nav-dropdown-hover-color: #ffffff; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+}
+
+/* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
+
+.light-background {
+  --background-color: #f4fafd;
+  --surface-color: #ffffff;
+}
+
+.dark-background {
+  --background-color: #040b14;
+  --default-color: #ffffff;
+  --heading-color: #ffffff;
+  --surface-color: #151f2b;
+  --contrast-color: #ffffff;
+}
+
+/* Smooth scroll */
+:root {
+  scroll-behavior: smooth;
+}
+
+/*--------------------------------------------------------------
+# General Styling & Shared Classes
+--------------------------------------------------------------*/
+body {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  font-family: var(--default-font);
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: color-mix(in srgb, var(--accent-color), transparent 25%);
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--heading-color);
+  font-family: var(--heading-font);
+}
+
+/* PHP Email Form Messages
+------------------------------*/
+.php-email-form .error-message {
+  display: none;
+  background: #df1529;
+  color: #ffffff;
+  text-align: left;
+  padding: 15px;
+  margin-bottom: 24px;
+  font-weight: 600;
+}
+
+.php-email-form .sent-message {
+  display: none;
+  color: #ffffff;
+  background: #059652;
+  text-align: center;
+  padding: 15px;
+  margin-bottom: 24px;
+  font-weight: 600;
+}
+
+.php-email-form .loading {
+  display: none;
+  background: var(--surface-color);
+  text-align: center;
+  padding: 15px;
+  margin-bottom: 24px;
+}
+
+.php-email-form .loading:before {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  margin: 0 10px -6px 0;
+  border: 3px solid var(--accent-color);
+  border-top-color: var(--surface-color);
+  animation: php-email-form-loading 1s linear infinite;
+}
+
+@keyframes php-email-form-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*--------------------------------------------------------------
+# Global Header
+--------------------------------------------------------------*/
+.header {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  padding: 0 15px;
+  width: 300px;
+  transition: all ease-in-out 0.3s;
+  overflow-y: auto;
+  z-index: 997;
+  border-right: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+}
+
+.header .profile-img img {
+  margin: 15px auto;
+  display: block;
+  width: 120px;
+  border: 8px solid color-mix(in srgb, var(--default-color), transparent 85%);
+}
+
+.header .logo {
+  line-height: 1;
+  margin-bottom: 15px;
+}
+
+.header .logo img {
+  max-height: 32px;
+  margin-right: 8px;
+}
+
+.header .logo h1 {
+  font-size: 24px;
+  margin: 0;
+  font-weight: 700;
+  color: var(--heading-color);
+}
+
+.header .social-links {
+  margin: 0 0 20px 0;
+}
+
+.header .social-links a {
+  font-size: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: color-mix(in srgb, var(--default-color), transparent 90%);
+  color: var(--default-color);
+  margin: 0 2px;
+  border-radius: 50%;
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  transition: 0.3s;
+}
+
+.header .social-links a:hover {
+  color: var(--contrast-color);
+  background: var(--accent-color);
+}
+
+@media (min-width: 1200px) {
+
+  .header~main,
+  .header~#footer {
+    margin-left: 300px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .header {
+    left: -100%;
+  }
+}
+
+.header.header-show {
+  left: 0;
+}
+
+.header .header-toggle {
+  color: var(--contrast-color);
+  background-color: var(--accent-color);
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 9999;
+  transition: background-color 0.3s;
+}
+
+.header .header-toggle:hover {
+  color: var(--contrast-color);
+  background-color: color-mix(in srgb, var(--accent-color) 90%, white 15%);
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+.mobile-nav-toggle {
+  display: none;
+}
+
+.navmenu {
+  padding: 0;
+  z-index: 9997;
+}
+
+.navmenu ul {
+  list-style: none;
+  padding: 0 0 20px 0;
+  margin: 0;
+}
+
+.navmenu a,
+.navmenu a:focus {
+  color: var(--nav-color);
+  padding: 15px 10px;
+  font-family: var(--nav-font);
+  font-size: 16px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  transition: 0.3s;
+  width: 100%;
+}
+
+.navmenu a .navicon,
+.navmenu a:focus .navicon {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.navmenu a .toggle-dropdown,
+.navmenu a:focus .toggle-dropdown {
+  font-size: 12px;
+  line-height: 0;
+  margin-left: auto;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: 0.3s;
+  flex-shrink: 0;
+  background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+}
+
+.navmenu a .toggle-dropdown:hover,
+.navmenu a:focus .toggle-dropdown:hover {
+  background-color: var(--accent-color);
+  color: var(--contrast-color);
+}
+
+.navmenu a:hover,
+.navmenu .active,
+.navmenu .active:focus {
+  color: var(--nav-hover-color);
+}
+
+.navmenu a:hover .navicon,
+.navmenu .active .navicon,
+.navmenu .active:focus .navicon {
+  color: var(--accent-color);
+}
+
+.navmenu .active .toggle-dropdown,
+.navmenu .active:focus .toggle-dropdown {
+  background-color: var(--accent-color);
+  color: var(--contrast-color);
+  transform: rotate(180deg);
+}
+
+.navmenu .dropdown {
+  display: block;
+}
+
+.navmenu .dropdown a,
+.navmenu .dropdown a:focus {
+  color: --nav-dropdown-color;
+}
+
+.navmenu .dropdown a:hover,
+.navmenu .dropdown .active,
+.navmenu .dropdown .active:focus {
+  color: var(--nav-dropdown-hover-color);
+}
+
+.navmenu .dropdown ul {
+  position: static;
+  display: none;
+  z-index: 99;
+  padding: 5px 10px;
+  margin: 5px 10px;
+  background-color: var(--nav-dropdown-background-color);
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  box-shadow: none;
+  transition: all 0.5s ease-in-out;
+}
+
+.navmenu .dropdown ul ul {
+  background-color: rgba(33, 37, 41, 0.1);
+}
+
+.navmenu .dropdown>.dropdown-active {
+  display: block;
+  background-color: rgba(33, 37, 41, 0.03);
+}
+
+/*--------------------------------------------------------------
+# Global Footer
+--------------------------------------------------------------*/
+.footer {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  font-size: 14px;
+  padding: 40px 0;
+  position: relative;
+  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+}
+
+.footer .copyright p {
+  margin-bottom: 0;
+}
+
+.footer .credits {
+  margin-top: 4px;
+  font-size: 13px;
+  text-align: center;
+}
+
+/*--------------------------------------------------------------
+# Preloader
+--------------------------------------------------------------*/
+#preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 999999;
+  overflow: hidden;
+  background: var(--background-color);
+  transition: all 0.6s ease-out;
+}
+
+#preloader:before {
+  content: "";
+  position: fixed;
+  top: calc(50% - 30px);
+  left: calc(50% - 30px);
+  border: 6px solid #ffffff;
+  border-color: var(--accent-color) transparent var(--accent-color) transparent;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: animate-preloader 1.5s linear infinite;
+}
+
+@keyframes animate-preloader {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*--------------------------------------------------------------
+# Scroll Top Button
+--------------------------------------------------------------*/
+.scroll-top {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: -15px;
+  z-index: 99999;
+  background-color: var(--accent-color);
+  width: 44px;
+  height: 44px;
+  border-radius: 50px;
+  transition: all 0.4s;
+}
+
+.scroll-top i {
+  font-size: 24px;
+  color: var(--contrast-color);
+  line-height: 0;
+}
+
+.scroll-top:hover {
+  background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+  color: var(--contrast-color);
+}
+
+.scroll-top.active {
+  visibility: visible;
+  opacity: 1;
+  bottom: 15px;
+}
+
+/*--------------------------------------------------------------
+# Disable aos animation delay on mobile devices
+--------------------------------------------------------------*/
+@media screen and (max-width: 768px) {
+  [data-aos-delay] {
+    transition-delay: 0 !important;
+  }
+}
+
+/*--------------------------------------------------------------
+# Global Page Titles & Breadcrumbs
+--------------------------------------------------------------*/
+.page-title {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  padding: 25px 0;
+  position: relative;
+}
+
+.page-title h1 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.page-title .breadcrumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.page-title .breadcrumbs ol li+li {
+  padding-left: 10px;
+}
+
+.page-title .breadcrumbs ol li+li::before {
+  content: "/";
+  display: inline-block;
+  padding-right: 10px;
+  color: color-mix(in srgb, var(--default-color), transparent 70%);
+}
+
+/*--------------------------------------------------------------
+# Global Sections
+--------------------------------------------------------------*/
+section,
+.section {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  padding: 60px 0;
+  overflow: clip;
+}
+
+/*--------------------------------------------------------------
+# Global Section Titles
+--------------------------------------------------------------*/
+.section-title {
+  padding-bottom: 60px;
+  position: relative;
+}
+
+.section-title h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.section-title h2:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: var(--accent-color);
+  left: 0;
+  bottom: 0;
+}
+
+.section-title p {
+  margin-bottom: 0;
+}
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+.hero {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  padding: 80px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.hero:before {
+  content: "";
+  background: color-mix(in srgb, var(--background-color), transparent 70%);
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 3;
+}
+
+.hero h2 {
+  margin: 25 0 0 0;
+  font-size: 100px;
+  font-weight: 700;
+  color:chartreuse;
+}
+
+.hero p {
+  margin: 5px 0 0 0;
+  font-size: 50px;
+  color:cornsilk;
+}
+
+.hero p span {
+  letter-spacing: 1px;
+  border-bottom: 2px solid var(--accent-color);
+}
+
+.hero .social-links {
+  margin-top: 25px;
+}
+
+.hero .social-links a {
+  font-size: 24px;
+  display: inline-block;
+  color: color-mix(in srgb, var(--default-color), transparent 50%);
+  line-height: 1;
+  margin-right: 20px;
+  transition: 0.3s;
+}
+
+.hero .social-links a:hover {
+  color: var(--accent-color);
+}
+
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 20px;
+  }
+}
+
+/* =========================================================
+   ABOUT — Mise en page propre (photo à gauche + listes alignées)
+   ========================================================= */
+
+/* Titre principal de section */
+.about h1 {
+  text-align: center;
+  font-size: 52px;
+  margin-bottom: .25rem;
+}
+
+/* Sous-titre/accroche dans la colonne de droite */
+.about .content h2,
+#about .content h3 {        /* permet d’attraper le h3 qu’on a proposé */
+  font-weight: 700;
+  font-size: 1.9rem;       /* ≈ 25–26px, plus lisible que 36 sur tous écrans */
+  line-height: 1.25;
+  margin-bottom: .75rem;
+}
+
+/* --- Aside gauche : photo proche du menu (sticky) --- */
+.about-aside {
+  position: sticky;
+  top: 90px;                /* garde la photo sous le header fixe */
+}
+.about-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: .75rem;
+  box-shadow: 0 6px 18px rgba(14, 165, 233, 0.15);
+  border: 2px solid rgba(14, 165, 233, 0.25);
+}
+
+/* --- Listes d’informations (ne pas toucher aux autres listes du thème) --- */
+.info-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1.15rem;      /* ≈ 16–17px */
+}
+.info-list li {
+  display: flex;
+  align-items: baseline;
+  gap: .5rem;
+  margin-bottom: .75rem;    /* 12px */
+}
+.info-list li i {
+  font-size: 1rem;          /* ≈ 16px */
+  color: var(--accent-color);
+  line-height: 1;
+  margin-right: .25rem;
+}
+.info-list li strong {
+  margin-right: .5rem;
+  min-width: 120px;         /* aligne les labels (Diplôme, Phone, …) */
+  font-weight: 600;
+  color: var(--heading-color, #fff);
+}
+.info-list li span {
+  color: var(--default-color, #cfd6df);
+}
+
+/* Paragraphe de conclusion dans la colonne de droite */
+#about .content p {
+  font-size: 1rem;
+  margin-bottom: .75rem;
+}
+
+/* --- Petits boutons sous la photo --- */
+.about-aside .btn {
+  border-radius: .6rem;
+  padding: .5rem .75rem;
+}
+
+/* --- Responsive --- */
+@media (max-width: 991.98px) {
+  .about-aside { position: static; margin-bottom: 1rem; }
+  .info-list { font-size: 1rem; }
+  .info-list li strong { min-width: 110px; }
+}
+@media (max-width: 575.98px) {
+  .about h1 { font-size: 38px; }
+  .about .content h2, #about .content h3 { font-size: 1.35rem; }
+  .info-list li { margin-bottom: .6rem; }
+  .info-list li strong { min-width: 100px; }
+}
+
+/*--------------------------------------------------------------
+# Stats Section (version personnalisée)
+--------------------------------------------------------------*/
+.stats .stats-item {
+  position: relative;
+  padding: 30px 25px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+.stats .stats-item:hover {
+  background: rgba(14, 165, 233, 0.1);
+  transform: translateY(-4px);
+}
+
+.stats .stats-item i {
+  color: var(--accent-color);
+  display: block;
+  font-size: 46px;             /* taille icône */
+  float: left;
+  line-height: 0;
+  margin-top: 4px;
+}
+
+.stats .stats-item .purecounter {
+  color: var(--heading-color);
+  font-size: 50px;             /* taille du nombre */
+  line-height: 42px;
+  display: block;
+  font-weight: 700;
+  margin-left: 65px;
+}
+
+.stats .stats-item p {
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  padding-top: 10px;
+  margin-left: 65px;
+  font-family: var(--heading-font);
+  font-size: 15px;
+  line-height: 1.4;
+}
+.stats .stats-item p strong {
+  display: block;
+  color: var(--heading-color);
+  font-weight: 600;
+  font-size: 16px;
+}
+
+/* responsive ajustements */
+@media (max-width: 767.98px) {
+  .stats .stats-item {
+    text-align: center;
+  }
+  .stats .stats-item i {
+    float: none;
+    margin: 0 auto 8px;
+  }
+  .stats .stats-item .purecounter,
+  .stats .stats-item p {
+    margin-left: 0;
+  }
+}
+/*--------------------------------------------------------------
+# Skills Section (version personnalisée bioinformatique)
+--------------------------------------------------------------*/
+.skills .progress {
+  height: 55px;                           /* légèrement plus compact */
+  background: none;
+  border-radius: 10px;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.skills .progress .skill {
+  color: var(--heading-color);
+  text-transform: none;                   /* garde les noms normaux : Python, R... */
+  font-weight: 600;
+  font-family: var(--heading-font);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+
+.skills .progress .skill .val {
+  font-style: normal;
+  font-size: 0.95rem;
+  color: var(--accent-color);
+}
+
+.skills .progress-bar-wrap {
+  background: rgba(255, 255, 255, 0.07);  /* léger fond translucide */
+  height: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.15);
+}
+
+.skills .progress-bar {
+  width: 1px;
+  height: 10px;
+  background: linear-gradient(90deg, var(--accent-color) 0%, #00b4d8 100%);
+  border-radius: 8px;
+  transition: width 0.9s ease;
+}
+
+/* Animation hover (facultatif, effet doux) */
+.skills .progress:hover .progress-bar {
+  opacity: 0.9;
+  transform: scaleY(1.1);
+  transition: all 0.3s ease;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .skills .progress { height: 50px; }
+  .skills .progress .skill { font-size: 0.95rem; }
+}
+
+
+/*--------------------------------------------------------------
+# Resume Section
+--------------------------------------------------------------*/
+/* Amélioration de la lisibilité du CV */
+.resume .resume-title {
+  font-size: 1.6rem;
+  border-bottom: 2px solid rgba(14,165,233,0.25);
+  padding-bottom: 6px;
+  margin-bottom: 18px;
+}
+
+.resume .resume-item h4 {
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--heading-color);
+  text-transform: none;
+}
+
+.resume .resume-item h5 {
+  background: rgba(14,165,233,0.1);
+  border-radius: 4px;
+  padding: 4px 10px;
+  font-size: 0.9rem;
+}
+
+.resume .resume-item ul {
+  list-style: none;
+  padding-left: 1.4em;
+}
+
+.resume .resume-item ul li::before {
+  content: "▹ ";
+  color: var(--accent-color);
+}
+
+.resume .resume-item a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+.resume .resume-item a:hover {
+  text-decoration: underline;
+}
+/* ==== Bouton CV ==== */
+.btn-cv {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--accent-color);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.btn-cv:hover {
+  background: color-mix(in srgb, var(--accent-color), #fff 20%);
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(14,165,233,0.4);
+}
+
+.btn-cv i {
+  font-size: 1.1rem;
+}
+
+
+/* ==========================================================
+   PORTFOLIO — Filtres + Cartes + Overlays (version premium)
+   ========================================================== */
+
+/* ---- Filtres (pills) ---- */
+.portfolio .portfolio-filters {
+  padding: 0;
+  margin: 0 auto 20px auto;
+  list-style: none;
+  text-align: center;
+}
+.portfolio .portfolio-filters li {
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 8px 10px;
+  padding: 8px 14px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: none;             /* plus lisible que UPPERCASE */
+  color: var(--heading-color);
+  background: rgba(255,255,255,0.05);
+  border: 1px solid transparent;
+  border-radius: 999px;
+  transition: all .25s ease;
+}
+.portfolio .portfolio-filters li:hover {
+  background: rgba(255,255,255,0.08);
+  transform: translateY(-1px);
+}
+.portfolio .portfolio-filters li.filter-active {
+  color: var(--heading-color);
+  background: rgba(14,165,233,0.16);
+  border-color: rgba(14,165,233,0.4);
+}
+@media (max-width: 575px) {
+  .portfolio .portfolio-filters li { margin: 0 5px 10px; font-size: 13px; }
+}
+
+/* ---- Carte projet ---- */
+.portfolio .portfolio-content {
+  position: relative;
+  overflow: hidden;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+.portfolio .portfolio-content:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(14,165,233,0.18);
+  border-color: rgba(14,165,233,0.28);
+}
+
+/* Images : ratio homogène + hover doux */
+.portfolio .portfolio-content img {
+  width: 100%;
+  height: auto;
+  transition: transform .3s ease, filter .3s ease;
+  /* optionnel : donne un ratio homogène selon tes visuels */
+  aspect-ratio: 4/3;
+  object-fit: cover;
+}
+.portfolio .portfolio-content:hover img {
+  transform: scale(1.05);
+  filter: saturate(1.03);
+}
+
+/* ---- Overlay infos ---- */
+.portfolio .portfolio-content .portfolio-info {
+  opacity: 0;
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 8px;
+  padding: 16px;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 20%, rgba(0,0,0,0.65) 100%);
+  transition: opacity .25s ease;
+}
+.portfolio .portfolio-content:hover .portfolio-info { opacity: 1; }
+
+/* Titre (pill) */
+.portfolio .portfolio-content .portfolio-info h4 {
+  align-self: flex-start;
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  background: var(--accent-color);
+  padding: 6px 10px;
+  border-radius: 8px;
+  margin: 0;
+}
+
+/* Description en bas */
+.portfolio .portfolio-content .portfolio-info p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.9);
+}
+
+/* Liens (zoom + details) centrés */
+.portfolio .portfolio-content .portfolio-info .preview-link,
+.portfolio .portfolio-content .portfolio-info .details-link {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 28px;
+  color: #fff;
+  transition: color .2s ease, transform .2s ease;
+  line-height: 1;
+}
+.portfolio .portfolio-content .portfolio-info .preview-link { left: calc(50% - 36px); }
+.portfolio .portfolio-content .portfolio-info .details-link { left: calc(50% + 8px); font-size: 32px; }
+
+.portfolio .portfolio-content .portfolio-info .preview-link:hover,
+.portfolio .portfolio-content .portfolio-info .details-link:hover {
+  color: var(--accent-color);
+  transform: translateY(-50%) scale(1.08);
+}
+
+/* Focus clavier (accessibilité) */
+.portfolio .portfolio-content .portfolio-info a:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+/* Réduction motion */
+@media (prefers-reduced-motion: reduce) {
+  .portfolio .portfolio-content,
+  .portfolio .portfolio-content img,
+  .portfolio .portfolio-filters li { transition: none !important; }
+}
+
+
+
+/*--------------------------------------------------------------
+# Contact Section (version sans formulaire)
+--------------------------------------------------------------*/
+.contact .info-wrap {
+  background: var(--surface-color);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 30px;
+  transition: all 0.3s ease;
+}
+
+.contact .info-wrap:hover {
+  box-shadow: 0 6px 26px rgba(14, 165, 233, 0.15);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 575px) {
+  .contact .info-wrap {
+    padding: 20px;
+  }
+}
+
+.contact .info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+.contact .info-item:last-child {
+  margin-bottom: 0;
+}
+
+.contact .info-item i {
+  font-size: 22px;
+  color: var(--accent-color);
+  background: color-mix(in srgb, var(--accent-color), transparent 90%);
+  width: 46px;
+  height: 46px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin-right: 15px;
+  transition: all 0.3s ease;
+}
+
+.contact .info-item:hover i {
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  transform: scale(1.05);
+}
+
+.contact .info-item h3 {
+  font-size: 17px;
+  font-weight: 700;
+  margin: 0 0 4px;
+  color: var(--heading-color);
+}
+
+.contact .info-item p {
+  margin: 0;
+  font-size: 14px;
+  color: color-mix(in srgb, var(--default-color), transparent 25%);
+}
+
+.contact .info-item a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.contact .info-item a:hover {
+  color: color-mix(in srgb, var(--accent-color), #fff 25%);
+}
+
+/* Carte */
+.contact iframe {
+  border-radius: 10px;
+  margin-top: 15px;
+  width: 100%;
+  height: 270px;
+  border: 0;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+/*--------------------------------------------------------------
+# Portfolio Details Section
+--------------------------------------------------------------*/
+.portfolio-details .portfolio-details-slider img {
+  width: 100%;
+}
+
+.portfolio-details .portfolio-details-slider .swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+}
+
+.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: color-mix(in srgb, var(--default-color), transparent 85%);
+  opacity: 1;
+}
+
+.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: var(--accent-color);
+}
+
+.portfolio-details .portfolio-info {
+  padding: 30px;
+  box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-details .portfolio-info h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+}
+
+.portfolio-details .portfolio-info ul {
+  list-style: none;
+  padding: 0;
+  font-size: 15px;
+}
+
+.portfolio-details .portfolio-info ul li+li {
+  margin-top: 10px;
+}
+
+.portfolio-details .portfolio-description {
+  padding-top: 30px;
+}
+
+.portfolio-details .portfolio-description h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.portfolio-details .portfolio-description p {
+  padding: 0;
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+}
+
+/* === Portfolio Details Info Custom === */
+.portfolio-details .portfolio-info h3 {
+  font-weight: 700;
+}
+.portfolio-details .portfolio-info ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+.portfolio-details .portfolio-info ul li {
+  margin: 6px 0;
+  line-height: 1.5;
+}
+.portfolio-details .portfolio-info ul li strong {
+  min-width: 120px;
+  display: inline-block;
+  color: var(--heading-color);
+}
+
+
+/*--------------------------------------------------------------
+# Starter Section Section
+--------------------------------------------------------------*/
+.starter-section {
+  /* Add your styles here */
+}

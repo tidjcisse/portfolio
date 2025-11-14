@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <!-- Charset & viewport -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Title (≤60 caractères) -->
+  <title>tidjanicisse — Bioinformaticien (NGS, IA, DataViz)</title>
+
+  <!-- Meta SEO -->
+  <meta name="description" content="Bioinformaticien spécialisé en NGS, pipelines Nextflow, analyses omiques, et data visualisation.">
+  <meta name="keywords" content="bioinformatique, NGS, RNA-seq, scRNA-seq, Nextflow, Snakemake, GATK, métagénomique, machine learning, data visualization, R, Python">
+
+  <!-- SEO multilingue -->
+  <link rel="canonical" href="https://votresite.com/">
+  <link rel="alternate" hreflang="fr" href="https://votresite.com/index.html">
+  <link rel="alternate" hreflang="en" href="https://votresite.com/index-en.html">
+  <meta name="robots" content="index,follow">
+
+  <!-- Favicons -->
+  <link rel="icon" href="assets/img/favicon.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+
+  <!-- Couleur d’UI (mobile) -->
+  <meta name="theme-color" content="#0ea5e9">
+  <meta name="color-scheme" content="light dark">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://[votre-domaine]/">
+  <meta property="og:title" content="Tidjani CISSE — Bioinformaticien (NGS, IA, DataViz)">
+  <meta property="og:description" content="[Résumé en 1 phrase] Pipelines NGS reproductibles, analyses omiques et visualisations pour décisions rapides.">
+  <meta property="og:image" content="https://[votre-domaine]/assets/img/og-cover.jpg">
+
+  <!-- Preconnect Fonts (perfs) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Google Fonts : ne charge que ce que tu utilises réellement -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Raleway:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- CSS principal (garde le nom de ton template) -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- JSON-LD schema.org Person (aide Google à comprendre ton profil) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "[Votre Nom]",
+    "jobTitle": "Bioinformatician",
+    "image": "https://[votre-domaine]/assets/img/profile.jpg",
+    "url": "https://[votre-domaine]/",
+    "sameAs": [
+      "www.linkedin.com/in/tidjani-cisse-3a9411197",
+      "https://github.com/[handle]"
+    ],
+    "worksFor": {
+      "@type": "Organization",
+      "name": "[Entreprise / Freelance]"
+    },
+    "knowsAbout": ["NGS","WES","WGS","RNA-seq","scRNA-seq","Nextflow","Snakemake","GATK","R","Python","Docker","Cloud"]
+  }
+  </script>
+
+  <!--
+    Template: iPortfolio (BootstrapMade)
+    License: https://bootstrapmade.com/license/
+    Note: Conserve le crédit en footer si tu restes sur la licence gratuite.
+  -->
+</head>
+
+
+<body class="index-page">
+
+<header id="header" class="header dark-background d-flex flex-column">
+
+  <!-- Bouton burger (mobile) -->
+  <i class="header-toggle d-xl-none bi bi-list" aria-label="Ouvrir le menu"></i>
+
+  <!-- Photo de profil -->
+  <div class="profile-img">
+    <img src="assets/img/my-profile-img.png"
+         alt="Photo de profil de Tidjani Cissé"
+         class="img-fluid rounded-circle" loading="lazy" width="200" height="190">
+  </div>
+
+  <!-- Logo / Nom -->
+  <a href="index.html" class="logo d-flex align-items-center justify-content-center" aria-label="Accueil">
+    <h1 class="sitename">Tidjani CISSE</h1>
+  </a>
+
+  <!-- Réseaux sociaux -->
+  <div class="social-links text-center">
+    <a href="https://www.linkedin.com/in/tidjani-cisse-3a9411197" class="linkedin" aria-label="LinkedIn" target="_blank" rel="noopener">
+      <i class="bi bi-linkedin"></i>
+    </a>
+  </div>
+
+  <!-- Sélecteur de langue -->
+  <div class="language-switcher text-center mt-2">
+    <a href="index.html" class="lang-link me-2" lang="fr" hreflang="fr">FR</a>
+    <!--ref="index_en.html" class="lang-link ms-2" lang="en" hreflang="en">EN</a> -->
+  </div>
+
+  <!-- Menu principal -->
+  <nav id="navmenu" class="navmenu" aria-label="Navigation principale">
+    <ul>
+      <li><a href="#hero" class="active" aria-current="page"><i class="bi bi-house navicon"></i> Accueil</a></li>
+      <li><a href="#about"><i class="bi bi-person navicon"></i> À propos</a></li>
+      <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> CV</a></li>
+      <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>
+      <li><a href="#localisation"><i class="bi bi-geo-alt navicon"></i> Localisation</a></li>
+      <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Horloge -->
+  <div class="text-center mt-3">
+    <span id="live-clock" class="small text-white-50" aria-live="polite"></span>
+  </div>
+
+</header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+
+      <img src="assets/img/accueil3.jpg" alt="" data-aos="fade-in" class="">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <h2>Tidjani CISSE</h2>
+        <p>Je suis un <span class="typed" data-typed-items="bioinformaticien, data scientiste, analyste multi-omics, spécialiste RNA-Seq">bioinformaticien</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <!-- About Section -->
+<section id="about" class="about section py-5">
+  <!-- Titre principal de la section -->
+  <div class="container section-title" data-aos="fade-up">
+    <!-- Garde un seul H1 sur la page (normalement dans la section Hero). 
+         Ici, on met un H2 pour rester sémantique. -->
+    <h2 class="mb-2">About</h2>
+    <p class="mb-0">
+      Étudiant en Master 2 de Bioinformatique, spécialisé dans l’analyse de données omiques et le développement d’outils automatisés.
+      J’aime concevoir des solutions à l’interface entre la biologie, la data science et le développement logiciel, pour faire parler les données du vivant.
+    </p>
+  </div>
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <div class="row gx-5">
+      
+      <!-- ASIDE À GAUCHE : photo collée à la colonne de nav -->
+      <aside class="col-12 col-lg-3 order-2 order-lg-1 about-aside">
+        <figure class="about-photo mb-4">
+          <img src="assets/img/accueil4.jpg"
+               class="img-fluid w-100 rounded-3"
+               alt="Portrait de Tidjani Cissé, bioinformaticien">
+        </figure>
+      </aside>
+
+      <!-- CONTENU LARGE À DROITE -->
+      <div class="col-12 col-lg-9 order-1 order-lg-2 content">
+        <h3 class="fw-bold mb-3">Bioinformaticien • Multi-omics & RNA-seq Specialist</h3>
+        <p class="text-muted mb-4">
+          Futur Ingénieur en Bioinformatique | Data Scientist. Focalisé sur des pipelines reproductibles (Nextflow/Snakemake) analyses NGS (bulk RNA-Seq, scRNA-Seq, Spatial transcriptomic) et data visualisation (R/Python) pour des décisions basées sur les données.
+        </p>
+
+        <!-- LISTES D’INFOS BIEN AIÉRÉES -->
+        <div class="row">
+          <div class="col-md-6">
+            <ul class="list-unstyled info-list vstack gap-2">
+              <li>
+                <i class="bi bi-chevron-right"></i>
+                <strong>Diplôme:</strong>
+                <a href="https://www.bioinfo-lyon.fr/" target="_blank" rel="noopener" class="text-decoration-none link-info">
+                  Master Bioinformatique, Data Science
+                </a>
+              </li>
+                <li>
+                  <i class="bi bi-chevron-right"></i>
+                  <strong>Téléphone :</strong>
+                  <a href="tel:+33769684861" class="text-decoration-none link-info">
+                    +33 7 69 68 48 61
+                  </a>
+                </li>
+              <li>
+                <i class="bi bi-geo-alt me-2 text-info"></i>
+                <strong class="me-2">Villes :</strong>
+                <span>Saint-Étienne, Lyon</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-md-6">
+            <ul class="list-unstyled info-list vstack gap-2">
+              <li>
+                <i class="bi bi-building me-2 text-info"></i>
+                <strong class="me-2">Établissement :</strong>
+                <a href="https://www.univ-lyon1.fr/" target="_blank" rel="noopener" class="text-decoration-none link-info">
+                  Université Claude Bernard Lyon 1
+                </a>
+              </li>
+              <li>
+                <i class="bi bi-envelope me-2 text-info"></i>
+                <strong class="me-2">Email :</strong>
+                <a href="mailto:tidjanicisse48@gmail.com"  target="_blank" rel="noopener" class="text-decoration-none link-info">
+                  tidjanicisse48@gmail.com
+                </a>
+
+              </li>
+              <li>
+                <i class="bi bi-translate me-2 text-info"></i>
+                <strong class="me-2">Langues :</strong>
+                <span>Français (nat.), Anglais (B2)</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- Petit texte de conclusion (remplace le lorem ipsum) -->
+        <div class="mt-3">
+          <p class="mb-0">
+            Je crois en la bioinformatique comme passerelle entre science, technologie et impact sociétal.
+            Mon parcours s’inscrit dans une vision à long terme : participer à l’avancement de la recherche biomédicale et écologique,
+            et fonder une plateforme africaine de bioinformatique capable d’apporter des solutions concrètes aux défis sanitaires et environnementaux.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /About Section -->
+<!-- Stats Section -->
+<section id="stats" class="stats section">
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <div class="row gy-4 justify-content-center text-center">
+
+      <!-- Heures de cours -->
+      <div class="col-lg-3 col-md-6">
+        <div class="stats-item">
+          <i class="bi bi-clock-history"></i>
+          <span data-purecounter-start="0" data-purecounter-end="828" data-purecounter-duration="2" class="purecounter"></span>
+          <p><strong>Heures de cours</strong><br><span>Formation Master Bioinformatique</span></p>
+        </div>
+      </div><!-- End Stats Item -->
+
+      <!-- Stages réalisés -->
+      <div class="col-lg-3 col-md-6">
+        <div class="stats-item">
+          <i class="bi bi-briefcase"></i>
+          <span data-purecounter-start="0" data-purecounter-end="3" data-purecounter-duration="1" class="purecounter"></span>
+          <p><strong>Stages réalisés</strong><br><span>Académiques & Recherche</span></p>
+        </div>
+      </div><!-- End Stats Item -->
+
+      <!-- Projets réalisés -->
+      <div class="col-lg-3 col-md-6">
+        <div class="stats-item">
+          <i class="bi bi-diagram-3"></i>
+          <span data-purecounter-start="0" data-purecounter-end="7" data-purecounter-duration="1" class="purecounter"></span>
+          <p><strong>Projets menés</strong><br><span>Analyse, Dev & Pipelines</span></p>
+        </div>
+      </div><!-- End Stats Item -->
+
+      <!-- Articles publiés -->
+      <div class="col-lg-3 col-md-6">
+        <div class="stats-item">
+          <i class="bi bi-journal-text"></i>
+          <span data-purecounter-start="0" data-purecounter-end="0" data-purecounter-duration="1" class="purecounter"></span>
+          <p><strong>Articles publiés</strong><br><span>en cours de préparation</span></p>
+        </div>
+      </div><!-- End Stats Item -->
+
+    </div>
+  </div>
+</section>
+<!-- /Stats Section -->
+
+
+<!-- Skills / Compétences -->
+<section id="skills" class="skills section light-background">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Compétences</h2>
+    <p>
+      Compétences développées tout au long de ma formation en bioinformatique, lors de mes projets académiques et de mes stages professionnels.
+      Voici quelques-unes de mes expertises techniques et outils que je maîtrise :
+    </p>
+  </div>
+  <!-- End Section Title -->
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <div class="row gy-4 skills-content skills-animation">
+
+      <!-- Colonne 1 -->
+      <div class="col-lg-6">
+
+        <!-- Programmation & Scripts -->
+        <div class="progress">
+          <span class="skill">
+            <span>Programmation &amp; Scripts</span> <i class="val">95%</i>
+          </span>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+        <ul class="list-inline small text-muted mt-2 mb-4">
+          <li class="list-inline-item"><i class="bi bi-code-slash text-info"></i> Python</li>
+          <li class="list-inline-item"><i class="bi bi-code-slash text-info"></i> R</li>
+          <li class="list-inline-item"><i class="bi bi-code-slash text-info"></i> C#</li>
+          <li class="list-inline-item"><i class="bi bi-terminal text-info"></i> Bash</li>
+          <li class="list-inline-item"><i class="bi bi-database text-info"></i> SQL</li>
+          <li class="list-inline-item"><i class="bi bi-braces text-info"></i> JavaScript</li>
+        </ul>
+
+        <!-- Bioinformatique -->
+        <div class="progress">
+          <span class="skill">
+            <span>Bioinformatique</span> <i class="val">90%</i>
+          </span>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+        <ul class="list-inline small text-muted mt-2 mb-4">
+          <li class="list-inline-item"><i class="bi bi-diagram-3 text-info"></i> Snakemake</li>
+          <li class="list-inline-item"><i class="bi bi-box text-info"></i> Conda</li>
+          <li class="list-inline-item"><i class="bi bi-gear text-info"></i> Biopython</li>
+          <li class="list-inline-item"><i class="bi bi-eyedropper text-info"></i> Génomique</li>
+          <li class="list-inline-item"><i class="bi bi-bug text-info"></i> Transcriptomique</li>
+        </ul>
+
+      </div>
+
+      <!-- Colonne 2 -->
+      <div class="col-lg-6">
+
+        <!-- Frameworks & Tools -->
+        <div class="progress">
+          <span class="skill">
+            <span>Frameworks &amp; Tools</span> <i class="val">85%</i>
+          </span>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+        <ul class="list-inline small text-muted mt-2 mb-4">
+          <li class="list-inline-item"><i class="bi bi-tools text-info"></i> .NET / C#</li>
+          <li class="list-inline-item"><i class="bi bi-tools text-info"></i> Streamlit</li>
+          <li class="list-inline-item"><i class="bi bi-tools text-info"></i> Flask</li>
+          <li class="list-inline-item"><i class="bi bi-tools text-info"></i> Django</li>
+          <li class="list-inline-item"><i class="bi bi-tools text-info"></i> JavaScript</li>
+          <li class="list-inline-item"><i class="bi bi-git text-info"></i> Git / GitHub</li>
+        </ul>
+
+        <!-- Data Science -->
+        <div class="progress">
+          <span class="skill">
+            <span>Data Science</span> <i class="val">80%</i>
+          </span>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+        <ul class="list-inline small text-muted mt-2 mb-4">
+          <li class="list-inline-item"><i class="bi bi-cpu text-info"></i> Machine Learning (Scikit-learn)</li>
+          <li class="list-inline-item"><i class="bi bi-bar-chart text-info"></i> Data Viz (Matplotlib, Seaborn, Plotly)</li>
+          <li class="list-inline-item"><i class="bi bi-columns-gap text-info"></i> Pandas</li>
+          <li class="list-inline-item"><i class="bi bi-diagram-2 text-info"></i> Numpy</li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /Skills Section -->
+
+
+   <!-- Resume Section -->
+<section id="resume" class="resume section">
+
+  <!-- Section Title -->
+<!-- Section Title -->
+  <div class="container section-title d-flex flex-column align-items-center text-center" data-aos="fade-up">
+    <h2>CV</h2>
+    <p>
+      Étudiant en Master 2 de Bioinformatique, spécialisé dans l’analyse de données omiques, 
+      le développement de workflows automatisés et d’applications web pour la biologie.
+      Passionné par la recherche appliquée et fondamentale, je souhaite contribuer à des projets 
+      scientifiques à l’interface entre la biologie et la data science.
+    </p>
+
+    <!-- Bouton de téléchargement -->
+    <a href="assets/docs/cv_pro_these_offre_emploi.pdf" download class="btn-cv mt-3" target="_blank" rel="noopener">
+      <i class="bi bi-file-earmark-arrow-down me-2"></i> Télécharger mon CV (PDF)
+    </a>
+  </div>
+<!-- End Section Title -->
+
+  <!-- End Section Title -->
+
+  <div class="container">
+    <div class="row">
+
+      <!-- Colonne gauche : Profil & Formation -->
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+
+        <h3 class="resume-title">Profil</h3>
+        <div class="resume-item pb-0">
+          <h4>Tidjani Cissé</h4>
+          <p><em>Bioinformaticien junior — Spécialiste Multi-omics & RNA-seq</em></p>
+          <ul>
+            <li>Saint-Étienne & Lyon, France</li>
+            <li><a href="tel:+33769684861">+33 7 69 68 48 61</a></li>
+            <li><a href="mailto:tidjanicisse48@gmail.com">tidjanicisse48@gmail.com</a></li>
+            <li><a href="https://www.linkedin.com/in/tidjani-cisse-3a9411197" target="_blank" rel="noopener">linkedin</a></li>
+          </ul>
+        </div>
+
+        <h3 class="resume-title">Formations</h3>
+
+        <!-- Master -->
+        <div class="resume-item">
+          <h4>Master Bioinformatique</h4>
+          <h5>2023 – 2026</h5>
+          <p><em>Université Claude Bernard Lyon 1 (UCBL1) — France</em></p>
+          <ul>
+            <li>Programme interdisciplinaire : biologie, informatique et data science appliqués à la génomique et à la santé.</li>
+            <li>Compétences : Python, R, SQL, apprentissage automatique, modélisation statistique, Big Data, pipelines bioinfo (Snakemake, Conda).</li>
+            <li>Spécialisation : génomique, transcriptomique, protéomique, visualisation et intégration multi-omics.</li>
+          </ul>
+        </div>
+
+        <!-- Licence Bioinfo -->
+        <div class="resume-item">
+          <h4>Licence Bioinformatique</h4>
+          <h5>2022 – 2023</h5>
+          <p><em>Université Côte d’Azur (Nice) — France</em></p>
+          <p>Formation combinant biologie, mathématiques et informatique, centrée sur l’analyse et la modélisation des systèmes biologiques.</p>
+        </div>
+
+        <!-- Licence Biologie -->
+        <div class="resume-item">
+          <h4>Licence Biologie des Organismes, Populations & Environnement</h4>
+          <h5>2019 – 2022</h5>
+          <p><em>Université d’Orléans — France</em></p>
+          <p>Acquisition des bases fondamentales en biologie, écologie et évolution, préparant à la spécialisation bioinformatique.</p>
+        </div>
+
+      </div>
+
+      <!-- Colonne droite : Expériences -->
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+        <h3 class="resume-title">Expériences Professionnelles</h3>
+
+                <!-- Stage en cours -->
+        <div class="resume-item">
+          <h4>Influence du régime alimentaire sur les gènes de dégradation de la lignocellulose</h4>
+          <h5>En cours — 2025</h5>
+          <p><em>LEHNA — Lyon, France</em></p>
+          <ul>
+            <li>Étude comparative des gènes CAZymes chez les isopodes Asellidae (surface vs souterrains).</li>
+            <li>Assemblage et annotation génomique automatisés via <strong>Snakemake</strong>.</li>
+            <li>Analyse comparative de 10 paires d’espèces, intégration et visualisation des résultats.</li>
+          </ul>
+        </div>
+
+        <!-- Stage 2025 -->
+        <div class="resume-item">
+          <h4>Analyse de l’expression des ERVs chez les petits ruminants</h4>
+          <h5>Janv – Juil 2025</h5>
+          <p><em>INRAE (IVPC) & LBBE — Lyon, France</em></p>
+          <ul>
+            <li>Étude de l’expression des familles ERVII-5 et ERVII-3 dans différents tissus cibles.</li>
+            <li>Exploration de métadonnées (NCBI-SRA) et développement d’une application <strong>Flask</strong> pour la visualisation interactive.</li>
+            <li>Analyse de données sur clusters HPC (Slurm), automatisation via <strong>Snakemake</strong> et <strong>Bash</strong>.</li>
+            <li>Résultat : mise en évidence de l’expression d’ERVII-5 dans l’utérus, l’oviducte et les stades embryonnaires précoces.</li>
+          </ul>
+        </div>
+
+        <!-- Stage 2024 -->
+        <div class="resume-item">
+          <h4>Analyse des éléments transposables (TE) chez Drosophila et le virus IIV6</h4>
+          <h5>Avr – Juil 2024</h5>
+          <p><em>LBBE — Lyon, France</em></p>
+          <ul>
+            <li>Étude bioinformatique des insertions d’éléments transposables dans le génome viral.</li>
+            <li>Analyses génomiques & transcriptomiques sous <strong>Python</strong> et <strong>R</strong>.</li>
+            <li>Visualisation et annotation des données à l’aide d’<strong>IGV</strong>.</li>
+            <li>Résultat : identification d’une surexpression des TE induite par l’infection virale.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /Resume Section -->
+
+<!-- Portfolio Section -->
+<section id="portfolio" class="portfolio section light-background">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Portfolio</h2>
+    <p>Projets académiques et stages : RNA-seq (bulk & single-cell), génomique, protéomique et applications web.</p>
+  </div>
+
+  <div class="container">
+    <!-- Isotope layout -->
+    <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+      <!-- Filters -->
+      <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+        <li data-filter="*" class="filter-active">Tous</li>
+        <li data-filter=".filter-m2">Master 2 (stage)</li>
+        <li data-filter=".filter-m1">Master 1 (stage)</li>
+        <li data-filter=".filter-bulk">bulk RNA-seq</li>
+        <li data-filter=".filter-scrna">scRNA-seq</li>
+        <li data-filter=".filter-proteomics">Protéomique</li>
+        <li data-filter=".filter-apps">Apps / Dashboards</li>
+        <li data-filter=".filter-extra">Autres projets</li>
+      </ul>
+      <!-- End Portfolio Filters -->
+
+      <!-- Grid -->
+      <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+
+        <!-- Proteomics – PeptideFinder -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-proteomics">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/portfolio/proteomic_img.png" class="img-fluid" alt="PeptideFinder – identification de peptides (protéomique)" loading="lazy">
+            <div class="portfolio-info">
+              <h4>PeptideFinder</h4>
+              <p>Outil d’identification de peptides (MS) — prototypage & évaluation.</p>
+              <a href="assets/img/portfolio/proteomic_img.png" title="PeptideFinder – aperçu pipeline" data-gallery="portfolioGallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html#peptidefinder" title="Détails" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div>
+        <!-- End item -->
+
+        <!-- M2 — ERVs bulk RNA-seq (visuel cycle) -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-m2 filter-bulk">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/portfolio/cycle_erv.svg" class="img-fluid" alt="ERVs chez les petits ruminants – schéma" loading="lazy">
+            <div class="portfolio-info">
+              <h4>ERVs — bulk RNA-seq</h4>
+              <p>Expression des familles ERVII-5/3 dans plusieurs tissus (INRAE & LBBE).</p>
+              <a href="assets/img/portfolio/cycle_erv.svg" title="ERVs — overview" data-gallery="portfolioGallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html#ervs" title="Détails" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div>
+        <!-- End item -->
+
+        <!-- M1 — TE & virus IIV6 (visuel 1) -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-m1 filter-bulk">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/portfolio/stageM1.png" class="img-fluid" alt="TE et virus IIV6 – aperçu résultats" loading="lazy">
+            <div class="portfolio-info">
+              <h4>TE • bulk RNA-seq</h4>
+              <p>Insertions d’éléments transposables dans un génome viral (Nanopore).</p>
+              <a href="assets/img/portfolio/stageM1.png" title="TE – visuel 1" data-gallery="portfolioGallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html#te-iiv6" title="Détails" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div>
+        <!-- End item -->
+
+        <!-- scRNA PBMC – UMAP -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-scrna">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/portfolio/pbmc3k_umap.jpg" class="img-fluid" alt="scRNA PBMC – UMAP & clustering" loading="lazy">
+            <div class="portfolio-info">
+              <h4>scRNA-seq — PBMC</h4>
+              <p>Prétraitement, clustering et annotation des cellules immunitaires.</p>
+              <a href="assets/img/portfolio/pbmc3k_umap.jpg" title="PBMC – UMAP" data-gallery="portfolioGallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html#scrna-pbmc" title="Détails" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div>
+        <!-- End item -->
+
+        <!-- M2 — ERVs bulk RNA-seq (pipeline) -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-m2 filter-bulk filter-apps">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/portfolio/pipeline_ivpc.png" class="img-fluid" alt="Pipeline RNA-seq – INRAE/LBBE" loading="lazy">
+            <div class="portfolio-info">
+              <h4>Pipeline RNA-seq</h4>
+              <p>Automatisation Snakemake + visualisation Flask.</p>
+              <a href="assets/img/portfolio/pipeline_ivpc.png" title="Pipeline RNA-seq" data-gallery="portfolioGallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html#rnaseq-pipeline" title="Détails" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div>
+        <!-- End item -->
+
+        <!-- scRNA PBMC – QC -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-scrna">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/portfolio/qc_rnaseq.png" class="img-fluid" alt="scRNA – contrôles qualité" loading="lazy">
+            <div class="portfolio-info">
+              <h4>scRNA-seq — QC</h4>
+              <p>Contrôles qualité & filtrages (MT%, UMI, gènes).</p>
+              <a href="assets/img/portfolio/qc_rnaseq.png" title="scRNA QC" data-gallery="portfolioGallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html#scrna-qc" title="Détails" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div>
+        <!-- End item -->
+
+        <!-- Proteomics – Shiny viz -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-proteomics filter-apps">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/portfolio/shiny_viz.png" class="img-fluid" alt="Visualisations Shiny – protéomique" loading="lazy">
+            <div class="portfolio-info">
+              <h4>Viz Shiny</h4>
+              <p>Exploration interactive (Shiny) des résultats MS.</p>
+              <a href="assets/img/portfolio/shiny_viz.png" title="Shiny – exemple" data-gallery="portfolioGallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html#shiny-proteomics" title="Détails" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div>
+        <!-- End item -->
+
+        <!-- M1 — TE & virus IIV6 (visuel 2) -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-m1 filter-bulk">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/portfolio/stageM1_2.png" class="img-fluid" alt="TE et virus IIV6 – visuel 2" loading="lazy">
+            <div class="portfolio-info">
+              <h4>TE • bulk RNA-seq</h4>
+              <p>Insertions d’ET dans le génome viral (analyse bioinfo).</p>
+              <a href="assets/img/portfolio/stageM1_2.png" title="TE – visuel 2" data-gallery="portfolioGallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html#te-iiv6" title="Détails" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div>
+        <!-- End item -->
+
+        <!-- M2 — ERVs bulk RNA-seq (résultats) -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-m2 filter-bulk">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/portfolio/results_ivpc.png" class="img-fluid" alt="ERVs – résultats RNA-seq" loading="lazy">
+            <div class="portfolio-info">
+              <h4>ERVs — résultats</h4>
+              <p>ERVII-5 exprimés (tissus adultes & stades précoces).</p>
+              <a href="assets/img/portfolio/results_ivpc.png" title="ERVs – résultats" data-gallery="portfolioGallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html#ervs" title="Détails" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div>
+        <!-- End item -->
+
+        <!-- scRNA PBMC – markers -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-scrna">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/portfolio/markers_clusters.png" class="img-fluid" alt="scRNA – marqueurs de clusters" loading="lazy">
+            <div class="portfolio-info">
+              <h4>scRNA-seq — marqueurs</h4>
+              <p>Identification des gènes marqueurs par clusters.</p>
+              <a href="assets/img/portfolio/markers_clusters.png" title="scRNA – markers" data-gallery="portfolioGallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html#scrna-markers" title="Détails" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div>
+        <!-- End item -->
+
+        <!-- Proteomics – Shiny viz 2 -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-proteomics filter-apps">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/portfolio/shiny_viz2.png" class="img-fluid" alt="Visualisations Shiny – vue 2" loading="lazy">
+            <div class="portfolio-info">
+              <h4>Viz Shiny (2)</h4>
+              <p>Exploration interactive — seconde vue.</p>
+              <a href="assets/img/portfolio/shiny_viz2.png" title="Shiny – exemple 2" data-gallery="portfolioGallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html#shiny-proteomics" title="Détails" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div>
+        <!-- End item -->
+
+        <!-- M1 — TE & virus IIV6 (visuel 3) -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-m1 filter-bulk">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/portfolio/stageM1_3.png" class="img-fluid" alt="TE et virus IIV6 – visuel 3" loading="lazy">
+            <div class="portfolio-info">
+              <h4>TE • bulk RNA-seq</h4>
+              <p>Surexpression des TE induite par l’infection virale.</p>
+              <a href="assets/img/portfolio/stageM1_3.png" title="TE – visuel 3" data-gallery="portfolioGallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html#te-iiv6" title="Détails" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div>
+        <!-- End item -->
+
+
+              <!-- ======== Autres projets académiques ======== -->
+      <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-extra">
+        <div class="portfolio-content h-100">
+          <a href="assets/docs/homologie_persistante.pdf" target="_blank">
+            <img src="assets/img/portfolio/portfostage2.png" class="img-fluid" alt="Homologie persistante">
+          </a>
+          <div class="portfolio-info">
+            <h4>Homologie persistante</h4>
+            <p>Analyse topologique de données biologiques — approche de géométrie computationnelle</p>
+            <a href="assets/img/portfolio/portfostage2.png" title="Homologie persistante" data-gallery="portfolio-gallery-extra" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+            <a href="assets/docs/homologie_persistante.pdf" title="Voir le PDF" target="_blank" class="details-link"><i class="bi bi-file-earmark-pdf"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-extra">
+        <div class="portfolio-content h-100">
+          <a href="assets/docs/flask_app.pdf" target="_blank">
+            <img src="assets/img/portfolio/flask_app.png" class="img-fluid" alt="Flask App">
+          </a>
+          <div class="portfolio-info">
+            <h4>Application Flask</h4>
+            <p>Développement d’une application web interactive pour la visualisation de données transcriptomiques</p>
+            <a href="assets/img/portfolio/flask_app.png" title="Application Flask" data-gallery="portfolio-gallery-extra" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+            <a href="assets/docs/flask_app.pdf" title="Voir le PDF" target="_blank" class="details-link"><i class="bi bi-file-earmark-pdf"></i></a>
+          </div>
+        </div>
+      </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-extra">
+        <div class="portfolio-content h-100">
+          <a href="assets/docs/Model_TD.pdf" target="_blank">
+            <img src="assets/img/portfolio/Model_TD.png" class="img-fluid" alt="Modéle toxico-dynamique">
+          </a>
+          <div class="portfolio-info">
+            <h4>Ecotoxicologie & Modélisation</h4>
+            <p>Modèle hiérarchique toxico-dynamique pour calculer des concentrations en contaminant protectrices des communautés d'espèces aquatiques</p>
+            <a href="assets/img/portfolio/Model_TD.png" title="Modéle toxico-dynamique" data-gallery="portfolio-gallery-extra" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+            <a href="assets/docs/Model_TD.pdf" title="Voir le PDF" target="_blank" class="details-link"><i class="bi bi-file-earmark-pdf"></i></a>
+          </div>
+        </div>
+      </div>
+
+      </div>
+      <!-- End Grid -->
+
+    </div>
+    <!-- /Isotope -->
+  </div>
+</section>
+<!-- /Portfolio Section -->
+
+  <!-- Contact Section -->
+<section id="contact" class="contact section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Contact</h2>
+    <p>N’hésitez pas à me contacter par e-mail ou LinkedIn. Réponse rapide.</p>
+  </div>
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <div class="row gy-4">
+
+      <div class="col-lg-5">
+        <div class="info-wrap">
+
+          <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+            <i class="bi bi-geo-alt flex-shrink-0"></i>
+            <div>
+              <h3>Localisation</h3>
+              <p>Saint-Étienne & Lyon, France</p>
+            </div>
+          </div>
+
+          <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+            <i class="bi bi-envelope flex-shrink-0"></i>
+            <div>
+              <h3>Email</h3>
+              <p><a href="mailto:tidjanicisse48@gmail.com">tidjanicisse48@gmail.com</a></p>
+            </div>
+          </div>
+
+          <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+            <i class="bi bi-linkedin flex-shrink-0"></i>
+            <div>
+              <h3>LinkedIn</h3>
+              <p><a href="https://www.linkedin.com/in/tidjani-cisse-3a9411197" target="_blank" rel="noopener">linkedin.com/in/tidjani-cisse-3a9411197</a></p>
+            </div>
+          </div>
+
+          <!-- OpenStreetMap embed (Lyon centre, ajuste si besoin) -->
+          <div class="mt-3">
+            <iframe
+              title="Carte – Lyon/Saint-Étienne"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=4.75%2C45.70%2C4.90%2C45.79&layer=mapnik&marker=45.764%2C4.835"
+              style="border:0; width: 100%; height: 270px;"
+              loading="lazy">
+            </iframe>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Formulaire (si tu veux l'activer plus tard) -->
+      <div class="col-lg-7">
+        <!-- Tu peux garder le formulaire d’origine ici / ou une zone “call-to-action” -->
+        <!-- Exemple simple : -->
+        <div class="p-4 rounded-3" style="background: rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08);">
+          <h4 class="mb-2">Une idée de projet&nbsp;?</h4>
+          <p class="mb-3">Écrivez-moi : je reviens vers vous rapidement pour discuter de votre besoin.</p>
+          <a class="btn btn-info text-white" href="mailto:tidjanicisse48@gmail.com">
+            <i class="bi bi-envelope me-2"></i> Contact par e-mail
+          </a>
+          <a class="btn btn-outline-info ms-2" href="https://www.linkedin.com/in/tidjani-cisse-3a9411197" target="_blank" rel="noopener">
+            <i class="bi bi-linkedin me-2"></i> Message LinkedIn
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- /Contact Section -->
+  </main>
+
+  <footer id="footer" class="footer position-relative light-background">
+
+    <span id="live-clock-footer" class="small text-white-50" aria-live="polite"></span>
+
+    <div class="container">
+      <div class="copyright text-center ">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">iPortfolio</strong> <span>All Rights Reserved</span></p>
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
