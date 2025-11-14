@@ -17,22 +17,22 @@
 
 /* 1️⃣  Taille et espacement général */
 #header {
-  width: 400px;                     /* largeur augmentée */
+  width: 240px;                     /* largeur augmentée */
   padding-top: 25px;                /* plus d’air en haut */
-  font-size: 1.05rem;               /* texte légèrement plus grand */
+  font-size: 0.7rem;               /* texte légèrement plus grand */
 }
 
 /* 2️⃣  Photo de profil plus grande */
 #header .profile-img img {
-  width: 190px;                     /* au lieu de ~120–150px */
-  height: 190px;
+  width: 150px;                     /* au lieu de ~120–150px */
+  height: 150px;
   border: 3px solid #0ea5e9;        /* léger cadre coloré */
   box-shadow: 0 0 15px rgba(14,165,233,0.3);
 }
 
 /* 3️⃣  Nom / titre */
 #header .sitename {
-  font-size: 1.8rem;                /* titre plus grand */
+  font-size: 1rem;                /* titre plus grand */
   font-weight: 700;
   margin-top: 10px;
 }
@@ -49,11 +49,11 @@
 
 /* 5️⃣  Liens du menu (icônes + texte) */
 #header .navmenu a {
-  font-size: 1.5rem;               /* texte plus grand */
+  font-size: 1rem;               /* texte plus grand */
   padding: 12px 20px;               /* plus d’espace cliquable */
 }
 #header .navmenu a i {
-  font-size: 1.2rem;                /* icône un peu plus grande */
+  font-size: 1rem;                /* icône un peu plus grande */
   margin-right: 10px;
 }
 #header .navmenu a:hover,
@@ -75,7 +75,7 @@
 
 /* 7️⃣  Horloge */
 #live-clock {
-  font-size: 1.2rem;
+  font-size: 0.8rem;
   color: #ddd;
   margin-top: 10px;
   display: inline-block;
